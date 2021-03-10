@@ -1,0 +1,154 @@
+@import "mixins";
+
+.navbar {
+  background-color: $bg-primary !important;
+}
+
+
+//carousel
+.carousel {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  max-height: 600px;
+
+  .dot {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    button {
+      width: 20px;
+      height: 5px;
+      margin: 5px;
+      border: none;
+      outline: none;
+      box-shadow: none;
+      border-radius: 2px;
+      background-color: rgba($light, 0.2);
+
+      .dot___3c3SI.carousel__dot.carousel__dot--1.carousel__dot--selected {
+        background-color: white !important;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+
+//cta
+.cta_container {
+  background-color: $bg-primary;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+  }
+
+  .button_register {
+    background-color: $bg-secondary !important;
+    padding: 1rem 5rem;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    font-size: 1em;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .button_call {
+    background-color: darken($bg-success, 10%) !important;
+    font-size: .9em;
+    font-weight: 500;
+    border-radius: 20px 5px 20px 5px;
+    padding: 8px 3rem;
+    position: relative;
+
+    &:before {
+      content: "Call Us Now";
+      pointer-events: none;
+      background-color: rgba($bg-success, 1);
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 75%;
+      border-radius: 25px 5px 25px 5px;
+      height: 100%;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+//product
+.product {
+  background-color: $light;
+  min-height: 200px;
+  padding: 4rem;
+
+  .container {
+    .title {
+      text-align: center;
+      font-weight: 600;
+      color: $dark;
+      font-size: 2rem;
+    }
+
+    .product_item {
+      margin-top: 4rem;
+
+      .name {
+        font-weight: 600;
+        font-size: 1.3rem;
+        color: darken($dark, 10%);
+        margin-bottom: .5rem;
+      }
+
+      .description {
+        font-weight: 400;
+        font-size: 1rem;
+        color: $dark;
+      }
+    }
+  }
+}
+
+
+//footer
+.footer {
+  background-color: $bg-primary;
+  padding: 2rem;
+
+  .container {
+
+    .social_icons {
+      display: grid;
+      grid-template-columns: repeat(5, 30px);
+      gap: 10px;
+      cursor: pointer;
+
+      a {
+        .icon {
+          color: white;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+

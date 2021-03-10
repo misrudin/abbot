@@ -1,5 +1,6 @@
 @import "~bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+@import "mixins";
 
 html,
 body {
@@ -20,4 +21,26 @@ p, h5{
 
 * {
   box-sizing: border-box;
+}
+
+//carousel
+.carousel__dot--selected {
+  background-color: white !important;
+}
+
+button{
+  box-shadow: none !important;
+  outline: none !important;
+  border: none !important;
+}
+
+
+.button-main{
+  padding: 6px 35px;
+  background-color: $bg-secondary !important;
+  border-radius: 2px;
+  font-weight: 600;
+  font-size: 1.1em;
+  margin-bottom: 2rem;
+  color: $text-dark !important;
 }
