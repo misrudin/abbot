@@ -44,3 +44,7 @@ button{
   margin-bottom: 2rem;
   color: $text-dark !important;
 }
+
+.carousel-control-prev, .carousel-control-next {
+  display: none;
+}

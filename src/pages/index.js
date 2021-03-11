@@ -1,7 +1,6 @@
 import React from 'react'
-import {Button, Col, Container, Row} from "react-bootstrap";
+import {Button, Carousel, Col, Container, Row} from "react-bootstrap";
 import styles from 'styles/Home.module.scss'
-import {CarouselProvider, DotGroup, Slide, Slider} from "pure-react-carousel";
 import {Footer, Header} from "src/components";
 import Link from 'next/link'
 
@@ -15,28 +14,43 @@ const HomePage = () => {
 
       {/*carousel*/}
       <div className={styles.carousel}>
-        <CarouselProvider
-          naturalSlideWidth={100}
-          naturalSlideHeight={100}
-          totalSlides={3}
-          infinite={true}
-          isIntrinsicHeight={true}
-          isPlaying={true}
-          interval={5000}
-        >
-          <Slider>
-            <Slide>
-              <img src="/icons/dumy.jpg" alt="test"/>
-            </Slide>
-            <Slide>
-              <img src="/icons/dumy.jpg" alt="test"/>
-            </Slide>
-            <Slide>
-              <img src="/icons/dumy.jpg" alt="test"/>
-            </Slide>
-          </Slider>
-          <DotGroup className={styles.dot}/>
-        </CarouselProvider>
+        <Carousel>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src="/icons/dumy.jpg"
+              alt="First slide"
+            />
+            <Carousel.Caption>
+              <h3>First slide label</h3>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src="/icons/dumy.jpg"
+              alt="Second slide"
+            />
+
+            <Carousel.Caption>
+              <h3>Second slide label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src="/icons/dumy.jpg"
+              alt="Third slide"
+            />
+
+            <Carousel.Caption>
+              <h3>Third slide label</h3>
+              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
       </div>
 
       {/*  cta */}

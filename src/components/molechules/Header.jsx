@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <Navbar bg="dark" className={styles.navbar}>
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <img
             src="/icons/logo1.svg"
             width="150"

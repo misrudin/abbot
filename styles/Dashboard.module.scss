@@ -1,0 +1,123 @@
+@import "mixins";
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #f6f6f6;
+  padding: 20px;
+  height: 100%;
+
+  .header {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 1px 0 rgb(0 0 0 / 5%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .left{
+      display: flex;
+      align-items: center;
+
+      label{
+        cursor: pointer !important;
+      }
+      .option{
+        font-weight: 500;
+        color: $text-dark;
+        font-size: 1rem;
+        cursor: pointer !important;
+      }
+    }
+
+    h5 {
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: $text-dark;
+    }
+  }
+
+  .total_data {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 1px 0 rgb(0 0 0 / 5%);
+    margin-top: 1rem;
+
+    p {
+      font-weight: 500;
+      color: $dark;
+      font-size: .9rem;
+      margin-bottom: .8rem;
+    }
+
+    h5 {
+      color: $text-dark;
+      font-weight: 500;
+      font-size: 1.2rem;
+    }
+  }
+
+  table {
+    margin-top: 1rem;
+    margin-bottom: 0;
+
+    thead {
+      background-color: $light-blue;
+      border-radius: 5px !important;
+      overflow: hidden;
+      border: none;
+      position: relative;
+
+      th {
+        font-weight: 600 !important;
+        font-size: .9rem;
+      }
+    }
+
+    tbody{
+      tr{
+        cursor: pointer;
+      }
+    }
+
+    td {
+      font-weight: 500;
+      font-size: .9rem;
+      padding: 1rem 10px;
+    }
+
+    th, td {
+      border: none;
+
+      &:nth-last-child(1) {
+        border-radius: 0 5px 5px 0;
+      }
+
+      &:nth-child(1) {
+        border-radius: 5px 0 0 5px;
+      }
+    }
+
+    .footer_table {
+      background-color: $light-blue !important;
+      cursor: default !important;
+      td{
+        border-radius: 5px;
+        padding: 10px;
+
+        span{
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+}
+

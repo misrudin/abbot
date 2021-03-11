@@ -13,29 +13,33 @@ const Foooter = ({withLink}) => {
           <Row>
             <Col md={6}>
               <div className="d-flex">
-                <img style={{width: 150}} src="/icons/logo1.svg" alt="Logo1"/>
-                <img style={{width: 150}} src="/icons/logo2.png" alt="Logo2"/>
+                <a href="#">
+                  <img style={{width: 150}} src="/icons/logo1.svg" alt="Logo1"/>
+                </a>
+                <a href="#">
+                  <img style={{width: 150}} src="/icons/logo2.png" alt="Logo2"/>
+                </a>
               </div>
             </Col>
             <Col className=" d-flex justify-content-end" md={6}>
-              <Row className="text-left text-light">
-                <Col md={4}>
+              <Row className={`text-left text-light ${styles.links}`}>
+                <Col className={styles.link_col} md={4}>
                   <h5 className="mb-3">Product</h5>
-                  <p className="mb-1">Product 1</p>
-                  <p>Product 2</p>
+                  <a href="#" className="mb-2">Product 1</a>
+                  <a href="#">Product 2</a>
                 </Col>
-                <Col md={4}>
+                <Col className={styles.link_col} md={4}>
                   <h5 className="mb-3">Platform</h5>
-                  <p className="mb-1">Web 1</p>
-                  <p className="mb-1">Web 2</p>
-                  <p className="mb-1">Android</p>
-                  <p>IOS</p>
+                  <a href="#" className="mb-2">Web 1</a>
+                  <a href="#" className="mb-2">Web 2</a>
+                  <a href="#" className="mb-2">Android</a>
+                  <a href="#">IOS</a>
                 </Col>
-                <Col md={4}>
+                <Col className={styles.link_col} md={4}>
                   <h5 className="mb-3">Company</h5>
-                  <p className="mb-1">About</p>
-                  <p className="mb-1">Blog</p>
-                  <p>Maps</p>
+                  <a href="#" className="mb-2">About</a>
+                  <a href="#" className="mb-2">Blog</a>
+                  <a href="#">Maps</a>
                 </Col>
               </Row>
             </Col>
@@ -47,19 +51,19 @@ const Foooter = ({withLink}) => {
           </Col>
           <Col className="d-flex justify-content-end" md={6}>
             <div className={styles.social_icons}>
-              <a href={void (0)}>
+              <a href="#">
                 <FaGooglePlus style={{color: 'red'}} className={styles.icon}/>
               </a>
-              <a href={void (0)}>
+              <a href="#">
                 <FaWhatsapp style={{color: '#128c7e'}} className={styles.icon}/>
               </a>
-              <a href={void (0)}>
+              <a href="#">
                 <FaInstagram className={styles.icon}/>
               </a>
-              <a href={void (0)}>
+              <a href="#">
                 <FaYoutube style={{color: '#c4302b'}} className={styles.icon}/>
               </a>
-              <a href={void (0)}>
+              <a href="#">
                 <FaFacebook style={{color: '#3b5998'}} className={styles.icon}/>
               </a>
             </div>
